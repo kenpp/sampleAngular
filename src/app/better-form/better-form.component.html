@@ -2,6 +2,6 @@
     <input formControlName="fieldOne">
     +
     <input formControlName="fieldTwo">
-    <button (click)="addAnyway()">CALC</button>
+    <button (click)="addAnyway()" [disabled]='calcForm.invalid'>CALC</button>
 </form>
     <div>{{result}}</div>
