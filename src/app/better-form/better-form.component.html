@@ -1,1 +1,7 @@
-<p>better-form works!</p>
+<form [formGroup]="calcForm">
+    <input formControlName="fieldOne">
+    +
+    <input formControlName="fieldTwo">
+    <button >CALC</button>
+</form>
+    <div>{{result}}</div>
