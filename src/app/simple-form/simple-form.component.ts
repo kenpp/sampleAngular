@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleFormComponent implements OnInit {
   result: string = "足し算しましょう。"
+
+  //関数の追加！
+  addAndShow(): void {
+    //ここに実行したい処理を書く。
+    this.result = 'テストです。'
+  }
+
   constructor() { }
 
   ngOnInit(): void {
