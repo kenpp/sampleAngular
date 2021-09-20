@@ -1,7 +1,7 @@
 <form [formGroup]="calcForm">
-    <input formControlName="fieldOne">
+    <input formControlName="fieldOne" [class.input-invalid]="fieldOne?.invalid" [class.input-valid]="fieldOne?.valid">
     +
-    <input formControlName="fieldTwo">
+    <input formControlName="fieldTwo" [class.input-invalid]="fieldTwo?.invalid" [class.input-valid]="fieldTwo?.valid">
     <button (click)="addAnyway()" [disabled]='calcForm.invalid'>CALC</button>
 </form>
     <div>{{result}}</div>
