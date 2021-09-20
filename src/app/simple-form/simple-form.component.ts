@@ -13,7 +13,7 @@ export class SimpleFormComponent implements OnInit {
   //関数の追加！
   addAndShow(): void {
     //ここに実行したい処理を書く。
-    this.result = 'テストです。'
+    this.result = this.text1;
   }
 
   constructor() { }
