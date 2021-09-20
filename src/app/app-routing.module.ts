@@ -6,6 +6,7 @@ import { ControlsComponent } from './controls/controls.component';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/simple-form', pathMatch: "full" },
   { path: "simple-form", component: SimpleFormComponent },
   { path: "better-form", component: BetterFormComponent },
   { path: "controls", component: ControlsComponent },
