@@ -1,0 +1,8 @@
+.ng-valid {
+  border-bottom: 10px solid green;
+}
+
+/* HTML5のバリデーションにひかかっている場合に、エラーが出る！ */
+.ng-invalid {
+  border-bottom: 10px solid red;
+}
