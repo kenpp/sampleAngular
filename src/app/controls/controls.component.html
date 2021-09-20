@@ -6,5 +6,13 @@
     <div>
         <label>テイスト：<input formControlName="taste" size="50"></label>
     </div>
+    <div>
+        <span>
+            <input type="radio" formControlName="hotCold" value="Hot">Hot
+        </span>
+        <span>
+            <input type="radio" formControlName="hotCold" value="Cold">Cold
+        </span>
+    </div>
 </form>
 <p>フォーム入力値:{{coffeeForm.value| json }}</p>

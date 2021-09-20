@@ -14,7 +14,8 @@ export class ControlsComponent implements OnInit {
   constructor(private fb: FormBuilder) {
     this.coffeeForm = this.fb.group({
       name: "ブレンド",
-      taste: "バランスのよい口当たり"
+      taste: "バランスのよい口当たり",
+      hotCold: "Hot"
     });
   }
 
