@@ -1,9 +1,9 @@
-.ng-valid {
+.ng-valid:not(form) {
   border-bottom: 10px solid green;
 }
 
 /* HTML5のバリデーションにひかかっている場合に、エラーが出る！ */
-.ng-invalid {
+.ng-invalid:not(form) {
   border-bottom: 10px solid red;
 }
 
