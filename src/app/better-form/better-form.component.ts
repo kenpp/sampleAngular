@@ -34,4 +34,8 @@ export class BetterFormComponent implements OnInit {
     this.result = resultStr;
 
   }
+
+  clearResult() {
+    this.result = "";
+  }
 }
