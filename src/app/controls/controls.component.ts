@@ -9,13 +9,14 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 export class ControlsComponent implements OnInit {
   coffeeForm!: FormGroup;
+  hotColdStatuses: string[] = ["Hot", "Cold"];
 
   // フォームビルダーを使うと、リアルタイムに値を設定することができる！！
   constructor(private fb: FormBuilder) {
     this.coffeeForm = this.fb.group({
       name: "ブレンド",
       taste: "バランスのよい口当たり",
-      hotCold: "Hot"
+      hotCold: this.hotColdStatuses[0]
     });
   }
 

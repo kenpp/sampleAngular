@@ -7,11 +7,8 @@
         <label>テイスト：<input formControlName="taste" size="50"></label>
     </div>
     <div>
-        <span>
-            <input type="radio" formControlName="hotCold" value="Hot">Hot
-        </span>
-        <span>
-            <input type="radio" formControlName="hotCold" value="Cold">Cold
+        <span *ngFor="let hotColdStatus of hotColdStatuses">
+            <input type="radio" formControlName="hotCold" [value]="hotColdStatus">{{hotColdStatus}}
         </span>
     </div>
 </form>
