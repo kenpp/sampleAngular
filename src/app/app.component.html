@@ -501,8 +501,9 @@
 <!-- <app-better-form></app-better-form> -->
 <!-- <app-controls></app-controls> -->
 <nav>
-  <a routerLink="./simple-form">Simple Form</a> |
+  <!-- <a routerLink="./simple-form">Simple Form</a> |
   <a routerLink="./better-form">Better Form</a> |
-  <a routerLink="./controls">Controls</a>
+  <a routerLink="./controls" routerLinkActive="selected-item">Controls</a> -->
+  <a *ngFor="let route of routes" routerLinkActive="selected-item" [routerLink]="route.path">{{route.title}}</a>
 </nav>
 <div><router-outlet></router-outlet></div>
