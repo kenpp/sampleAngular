@@ -12,8 +12,13 @@ export class SimpleFormComponent implements OnInit {
 
   //関数の追加！
   addAndShow(): void {
-    //ここに実行したい処理を書く。
-    this.result = this.text1;
+    let formResult: string = "正しい値を入力してください。"
+    const value1 = Number(this.text1);
+    const value2 = Number(this.text2);
+    if (!Number.isNaN(value1) && !Number.isNaN(value2)) {
+      formResult = `${value1} + ${value2} = ${value1 + value2}`;
+    }
+    this.result = formResult;
   }
 
   constructor() { }
