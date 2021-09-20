@@ -1,5 +1,10 @@
-<input [(ngModel)]="text1" required>
+<input [(ngModel)]="text1" required #fieldOne="ngModel">
 +
-<input [(ngModel)]="text2" required>
+<input [(ngModel)]="text2" required #fieldTwo="ngModel">
 <button (click)="addAndShow()">CALC</button>
 <div>{{result}}</div>
+<div>
+    <span *ngIf="fieldOne.invalid" class="my-invalid">左側のフィールドが空白です</span>
+    <br>
+    <span *ngIf="fieldTwo.invalid" class="my-invalid">右側のフィールドが空白です</span>
+</div>

@@ -6,3 +6,7 @@
 .ng-invalid {
   border-bottom: 10px solid red;
 }
+
+.my-invalid {
+  color: red
+}
