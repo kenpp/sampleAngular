@@ -8,7 +8,13 @@
             <img width="200" src="/assets/img/pict{{recipe.id}}.png">
         </td>
         <td>
-            <b>調理時間：</b>{{recipe.minute}}分<br>
+            <b>調理時間：</b>{{recipe.minute}}分<br><br>
+            <b>材料({{recipe.serve}}人分)：</b>
+            <ul>
+                <li *ngFor="let item of recipe.ingre">
+                    {{item.name}} &nbsp; {{item.amount}}
+                </li>
+            </ul>
         </td>
     </tr>
 </table>
