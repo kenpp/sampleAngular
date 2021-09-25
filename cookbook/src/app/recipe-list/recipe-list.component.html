@@ -9,7 +9,7 @@
       <td>{{recipe.feature}}</td>
       <td>
           <span *ngFor="let item of recipe.ingre; let i=index">
-         　{{item.name}}&nbsp;
+              <ng-container *ngIf="i<3"> {{item.name}}&nbsp; </ng-container>
           </span>
       </td>
     </tr>
