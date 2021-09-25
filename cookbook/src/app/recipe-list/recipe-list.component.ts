@@ -16,4 +16,8 @@ export class RecipeListComponent implements OnInit {
     this.recipeData = this.rsv.getRecipeData();
   }
 
+  public searchRecipe(keyword: string) {
+    this.recipeData = this.rsv.searchRecipe(keyword);
+  }
+
 }

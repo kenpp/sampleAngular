@@ -14,7 +14,20 @@ export class RecipeService {
     return this.recipeData;
   }
 
-  getRecipe(id: string): Recipe | undefined {
+  public getRecipe(id: string): Recipe | undefined {
     return this.recipeData.find(recipe => recipe.id.toString() == id);
+  }
+
+  public searchRecipe(keyword: string): Recipe[] {
+    let resultArr: Recipe[] = [];
+
+    for (let recipe of this.recipeData) {
+      let dataStr = JSON.stringify(recipe);
+      if (dataStr.search(keyword) >= 0) {
+        resultArr.push(recipe);
+      }
+    }
+
+    return resultArr;
   }
 }
