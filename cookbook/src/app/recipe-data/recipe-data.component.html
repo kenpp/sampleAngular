@@ -1,4 +1,16 @@
-<div>
-    {{recipeId}}番目のレシピが選択されました！
+<!-- レシピ詳細 -->
+<div *ngIf="recipe">
+    <h2>{{recipe.name}}</h2>
+    <p>{{recipe.feature}}</p>
+<table>
+    <tr>
+        <td>
+            <img width="200" src="/assets/img/pict{{recipe.id}}.png">
+        </td>
+        <td>
+            <b>調理時間：</b>{{recipe.minute}}分<br>
+        </td>
+    </tr>
+</table>
 </div>
 <button (click)="backToList()">一覧に戻る</button>
