@@ -1,6 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "sampleAngular",
+			"path": "."
+		},
+		{
+			"name": "cookbook",
 			"path": "."
 		}
 	],
