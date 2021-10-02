@@ -11,7 +11,9 @@ export class SimpleFormComponent implements OnInit {
   text2!: string;
   result: string = "足し算しましょう。";
   //imgPath: Promise<string> = new Promise<string>(() => { return ""; });
-  imgPath = '';
+  fileContent = {
+    base64: "",
+  };
 
   //関数の追加！
   addAndShow(): void {
@@ -83,24 +85,12 @@ export class SimpleFormComponent implements OnInit {
           if (result) {
             reader.readAsDataURL(result); // read file as data url
             reader.onload = () => { // called once readAsDataURL is completed
-              thisComponent.imgPath = <string>reader.result;
+              thisComponent.fileContent.base64 = <string>reader.result;
 
             }
           }
         }
       )
-    }
-  }
-
-  // 値が変化したときに呼び出されるライフサイクルメソッド.
-  ngOnChanges(changes: SimpleChanges) {
-    // @Inputが複数ある場合には、どの値の変化でもこのメソッドが呼ばれるので、
-    // 処理が必要なものだけに絞る（ここではvisibleに絞る）
-    if (changes.imgPath) {
-      console.log('visible is changed.')
-      console.log('previous=', changes.imgPath.previousValue)  // 変化前
-      console.log('current=', changes.imgPath.currentValue)    // 変化後
-      console.log('isFirst=', changes.imgPath.firstChange)     // 初めての値の設定か？
     }
   }
 }
