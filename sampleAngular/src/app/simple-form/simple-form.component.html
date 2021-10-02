@@ -10,3 +10,5 @@
         <span *ngIf="fieldTwo.invalid" class="my-invalid">右側のフィールドが空白です</span>
     </div>
 </form>
+    <input type="file" (change)="inputFile($event)">
+    <img [src]="imgPath"/>

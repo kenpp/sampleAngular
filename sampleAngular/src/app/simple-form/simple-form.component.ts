@@ -9,6 +9,7 @@ export class SimpleFormComponent implements OnInit {
   text1!: string;
   text2!: string;
   result: string = "足し算しましょう。";
+  imgPath = ''
 
   //関数の追加！
   addAndShow(): void {
@@ -26,4 +27,17 @@ export class SimpleFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // ファイルアップロード
+  public inputFile(event: any): void {
+    const thisComponent = this;
+    if (event.target!.files && event.target!.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target!.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.imgPath = <string>event.target!.result;
+      }
+    }
+  }
 }
